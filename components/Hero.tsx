@@ -18,7 +18,7 @@ function Hero () {
           <h1 className='font-poppins text-[40px] sm:text-[52px] leading-[65px] font-extrabold text-primary'>
             Discover Our <br /> New Collection
           </h1>
-          <p className='font-poppins w-[80%] sm:w-[90%] text-[14px] sm:text-[18px] mb-10 font-medium text-secondary'>
+          <p className='font-poppins w-[60%] sm:w-[90%] text-[14px] sm:text-[18px] mb-10 font-medium text-secondary'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
             tellus, luctus nec ullamcorper mattis.
           </p>
