@@ -2,8 +2,8 @@ import React from 'react'
 
 interface buttonProps {
   text: string
-  bgColor: string
-  textColor: string
+  bgColor?: string
+  textColor?: string
   height?: string
   width?: string
   classes?: string,
