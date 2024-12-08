@@ -1,12 +1,13 @@
-import Hero from "@/components/Hero";
-import Range from "@/components/Range";
+import Hero from '@/components/Hero'
+import Range from '@/components/Range'
+import Products from '@/components/Products'
 
-
-export default function Home() {
+export default function Home () {
   return (
-    <div className="flex w-[100%] flex-col 2xl:w-[1440px] items-center justify-center mx-auto overflow-hidden">
-      <Hero/>
-      <Range/>
+    <div className='flex w-[100%] gap-10 flex-col 2xl:w-[1440px] items-center justify-center mx-auto'>
+      <Hero />
+      <Range />
+      <Products />
     </div>
-  );
+  )
 }

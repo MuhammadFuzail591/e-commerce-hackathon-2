@@ -15,7 +15,7 @@ function Hero () {
           <h4 className='font-poppins text-[16px] font-semibold text-secondary'>
             New Arrival
           </h4>
-          <h1 className='font-poppins text-[52px] leading-[65px] font-extrabold text-primary'>
+          <h1 className='font-poppins text-[40px] sm:text-[52px] leading-[65px] font-extrabold text-primary'>
             Discover Our <br /> New Collection
           </h1>
           <p className='font-poppins w-[80%] sm:w-[90%] text-[18px] mb-10 font-medium text-secondary'>
