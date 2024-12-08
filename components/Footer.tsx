@@ -3,9 +3,9 @@ import React from 'react'
 
 function Footer () {
   return (
-    <footer className='w-[100%] mx-auto flex gap-10 px-16 py-10 flex-col 2xl:w-[1440px] h-[505px]'>
+    <footer className='w-[100%] mx-auto flex gap-10 px-10 md:px-16 py-10 flex-col 2xl:w-[1440px] h-[505px]'>
       <div className='flex w-[100%] flex-col sm:flex-row gap-10'>
-        <div className='w-12/12 sm:w-4/12 px-5 flex flex-wrap gap-10'>
+        <div className='w-12/12 sm:w-4/12 flex flex-wrap gap-10'>
           <h1 className='font-poppins text-[24px] font-bold text-black'>
             Furniro.
           </h1>
@@ -61,7 +61,7 @@ function Footer () {
           </div>
         </div>
       </div>
-      <div className='px-5'>
+      <div className=''>
         <p className='font-poppins text-[16px] font-bold text-black'>
           2023 furino. All rights reverved
         </p>
