@@ -26,7 +26,7 @@ function Header() {
         </nav>
 
         {/* Icons Section */}
-        <div className="icons flex items-center justify-between gap-[35px]">
+        <div className="icons flex items-center justify-between gap-[10px] sm:gap-[35px]">
           <Image src="/images/accountIcon.png" alt="Account Icon" width={28} height={28} />
           <Image src="/images/searchIcon.png" alt="Search Icon" width={28} height={28} />
           <Image src="/images/heartIcon.png" alt="Heart Icon" width={28} height={28} />

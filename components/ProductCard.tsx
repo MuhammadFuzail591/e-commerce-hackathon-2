@@ -26,7 +26,7 @@ function ProductCard ({
           height={301}
         ></Image>
         {discount && (
-          <span className='absolute top-4 right-4 font-poppins text-[16px] font-semibold text-white bg-discountBg w-[48px] h-[48px] rounded-full flex items-center justify-center'>
+          <span className={`absolute top-4 right-4 font-poppins text-[16px] font-semibold text-white ${discount === "New" ? "bg-newBg" : "bg-discountBg"} w-[48px] h-[48px] rounded-full flex items-center justify-center`}>
             {discount}
           </span>
         )}
