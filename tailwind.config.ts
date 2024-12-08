@@ -14,6 +14,7 @@ export default {
         offclr:"#666666",
         proheading:"#3A3A3A",
         prodesc:"#898989",
+        newBg:"#2EC1AC",
         discountBg:"#E97171",
         background: "var(--background)",
         foreground: "var(--foreground)",

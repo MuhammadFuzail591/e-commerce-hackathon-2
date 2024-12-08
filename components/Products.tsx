@@ -35,14 +35,14 @@ function products () {
       productImg: '/images/PImage5.png',
       productName: 'Grifo',
       productDescription: 'Night Lamp',
-      productPrice: '1,500',
-      discount: 'New'
+      productPrice: '1,500'
     },
     {
       productImg: '/images/PImage6.png',
       productName: 'Muggo',
       productDescription: 'Small mug',
-      productPrice: '150'
+      productPrice: '150',
+      discount: 'New'
     },
     {
       productImg: '/images/PImage7.png',
@@ -55,7 +55,8 @@ function products () {
       productImg: '/images/PImage8.png',
       productName: 'Potty',
       productDescription: 'Minimalist flower pot',
-      productPrice: '500'
+      productPrice: '500',
+      discount: 'New'
     }
   ]
   return (

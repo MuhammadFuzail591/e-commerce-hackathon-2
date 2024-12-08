@@ -1,6 +1,7 @@
 import Hero from '@/components/Hero'
 import Range from '@/components/Range'
 import Products from '@/components/Products'
+import Inspiration from '@/components/Inspiration'
 
 export default function Home () {
   return (
@@ -8,6 +9,7 @@ export default function Home () {
       <Hero />
       <Range />
       <Products />
+      <Inspiration />
     </div>
   )
 }
