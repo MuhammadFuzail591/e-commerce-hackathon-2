@@ -4,7 +4,7 @@ import Button from './Button'
 function Hero () {
   return (
     <section
-      className='flex w-[100%] relative md:flex-row flex-col 2xl:w-[1440px] h-[716px] bg-cover bg-center bg-no-repeat'
+      className='flex w-[100%] overflow-hidden relative md:flex-row flex-col 2xl:w-[1440px] h-[716px] bg-cover bg-center bg-no-repeat'
       style={{ backgroundImage: "url('/images/heroBackground.png')" }}
     >
       <div className='w-1/2'>
