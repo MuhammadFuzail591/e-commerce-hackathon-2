@@ -9,8 +9,15 @@ export default {
   theme: {
     extend: {
       colors: {
+        primary: "#B88E2F",
+        secondary: "#333333",
+        offclr:"#666666",
         background: "var(--background)",
         foreground: "var(--foreground)",
+      },
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
     },
   },
