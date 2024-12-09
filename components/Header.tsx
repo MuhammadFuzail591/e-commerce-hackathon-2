@@ -8,6 +8,7 @@ import ShoppingCart from './ShoppingCart';
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
+
   return (
     <div className='flex justify-center items-center w-full h-[100px] mx-auto'>
       <header className='flex justify-between items-center w-full max-w-[1286px] h-[41px] px-4'>

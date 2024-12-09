@@ -15,7 +15,7 @@ function Hero2 ({ mainHeading, subHeading, smallHeading }: Hero2Props) {
       style={{ backgroundImage: "url('/images/heroBackground.png')" }}
     >
     <div className="absolute inset-0 bg-gray-900 opacity-20 border-4 border-white"></div>
-    <div className='z-10 relative'>
+    <div className='z-10 relative flex flex-col items-center justify-center'>
       <h1 className='font-poppins text-[48px] font-extrabold text-black'>
         {mainHeading}
       </h1>
