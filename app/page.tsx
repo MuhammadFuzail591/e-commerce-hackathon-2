@@ -5,7 +5,6 @@ import Inspiration from '@/components/Inspiration'
 import FurnitureGallery from '@/components/FurnitureGallery'
 
 export default function Home () {
-
   const products = [
     {
       productImg: '/images/PImage1.png',
@@ -63,12 +62,12 @@ export default function Home () {
     }
   ]
   return (
-    <div className='flex w-[100%] overflow-hidden gap-10 flex-col 2xl:w-[1440px] items-center justify-center mx-auto'>
+    <div className='flex w-[100%] gap-10 flex-col 2xl:w-[1440px] items-center justify-center mx-auto'>
       <Hero />
       <Range />
       <Products products={products} isHome={true} />
       <Inspiration />
-      <FurnitureGallery/>
+      <FurnitureGallery />
     </div>
   )
 }

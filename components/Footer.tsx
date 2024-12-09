@@ -13,36 +13,38 @@ function Footer () {
             400 University Drive Suite 200 Coral Gables, FL 33134 USA
           </h3>
         </div>
-        <div className='w-2/12'>
-          <ul className='flex flex-row sm:flex-col gap-10'>
-            <li className='text-[16px] text-[#9F9F9F] font-bold'>Links</li>
-            <li className='text-[16px] text-black font-bold'>
-              <Link href='/'>Home</Link>
-            </li>
-            <li className='text-[16px] text-black font-bold'>
-              <Link href='/shop'>Shop</Link>
-            </li>
-            <li className='text-[16px] text-black font-bold'>
-              <Link href='/blog'>Blog</Link>
-            </li>
-            <li className='text-[16px] text-black font-bold'>
-              <Link href='/contact'>Contact</Link>
-            </li>
-          </ul>
-        </div>
-        <div className='w-2/12'>
-          <ul className='flex flex-row sm:flex-col gap-10 justify-start'>
-            <li className='text-[16px] text-[#9F9F9F] font-bold'>Help</li>
-            <li className='text-[16px] text-black font-bold'>
-              <Link href='/'>Payment Options</Link>
-            </li>
-            <li className='text-[16px] text-black font-bold'>
-              <Link href='/'>Returns</Link>
-            </li>
-            <li className='text-[16px] text-black font-bold'>
-              <Link href='/'>Provacy Policies</Link>
-            </li>
-          </ul>
+        <div className='grid grid-cols-2 md:grid-cols-3 gap-10'>
+          <div className='md:w-2/12'>
+            <ul className='flex flex-col gap-10'>
+              <li className='text-[16px] text-[#9F9F9F] font-bold'>Links</li>
+              <li className='text-[16px] text-black font-bold'>
+                <Link href='/'>Home</Link>
+              </li>
+              <li className='text-[16px] text-black font-bold'>
+                <Link href='/shop'>Shop</Link>
+              </li>
+              <li className='text-[16px] text-black font-bold'>
+                <Link href='/blog'>Blog</Link>
+              </li>
+              <li className='text-[16px] text-black font-bold'>
+                <Link href='/contact'>Contact</Link>
+              </li>
+            </ul>
+          </div>
+          <div className='w-2/12'>
+            <ul className='flex flex-col gap-10 justify-start'>
+              <li className='text-[16px] text-[#9F9F9F] font-bold'>Help</li>
+              <li className='text-[16px] text-black font-bold'>
+                <Link href='/'>Payment Options</Link>
+              </li>
+              <li className='text-[16px] text-black font-bold'>
+                <Link href='/'>Returns</Link>
+              </li>
+              <li className='text-[16px] text-black font-bold'>
+                <Link href='/'>Provacy Policies</Link>
+              </li>
+            </ul>
+          </div>
         </div>
         <div className='hidden w-4/12 sm:flex flex-col gap-10'>
           <h1 className='font-poppins text-[16px] font-bold text-[#9F9F9F]'>

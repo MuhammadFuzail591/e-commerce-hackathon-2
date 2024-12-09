@@ -17,10 +17,10 @@ function FurnitureGallery () {
   return (
     <section className='text-center'>
       <div>
-        <p className='font-poppins text-[20px] font-semibold text-offclr'>
+        <p className='font-poppins text-[16px] md:text-[20px] font-semibold text-offclr'>
           Share your setup with
         </p>
-        <h1 className='font-poppins text-[40px] font-bold text-secondary'>
+        <h1 className='font-poppins text-[30px] md:text-[40px] font-bold text-secondary'>
           #FuniroFurniture
         </h1>
       </div>

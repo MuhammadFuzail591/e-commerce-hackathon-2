@@ -6,7 +6,7 @@ import Button from './Button'
 interface ItemProps {
   onclick: () => void
 }
-function ShoppingCart ({onclick}: ItemProps) {
+function ShoppingCart ({ onclick }: ItemProps) {
   const items = [
     {
       itemImg: '/images/IImg1.png',
@@ -23,12 +23,15 @@ function ShoppingCart ({onclick}: ItemProps) {
   ]
   return (
     <section className='w-full h-full bg-black fixed top-0 left-0 z-20 bg-opacity-25'>
-      <div className='cart px-8 py-8 absolute top-0 right-0 w-[417px] h-[746px] bg-white opacity-100'>
+      <div className='cart px-8 py-8 absolute top-0 left-0 w-[340px] md:w-[417px] h-[746px] bg-white opacity-100'>
         <div className='mb-8 flex items-center justify-between'>
           <h1 className='font-poppins text-[24px] font-bold text-black'>
             Shopping Cart
           </h1>
-          <TbShoppingCartOff onClick={onclick} className='cursor-pointer w-[17px] h-[19px] text-[#9F9F9F]' />
+          <TbShoppingCartOff
+            onClick={onclick}
+            className='cursor-pointer w-[17px] h-[19px] text-[#9F9F9F]'
+          />
         </div>
         <div className='flex flex-col gap-4'>
           {items.map((item, index) => (
