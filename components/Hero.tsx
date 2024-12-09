@@ -8,7 +8,7 @@ function Hero () {
       style={{ backgroundImage: "url('/images/heroBackground.png')" }}
     >
       <div className='w-1/2'></div>
-      <div className='flex mt-[70px] lg:mt-0 lg:absolute top-[22%] lg:right-[20%] 2xl:right-0 w-[643px] h-[443px] flex-col lg:bg-white items-center justify-center'>
+      <div className='flex mt-[70px] md:mt-[135px] lg:mt-0 lg:absolute top-[22%] lg:right-[20%] 2xl:right-0 w-[643px] h-[443px] flex-col lg:bg-white items-center justify-center'>
         <div className='w-[561px] h-[344px]'>
           <h4 className='font-poppins text-[16px] font-semibold text-secondary'>
             New Arrival

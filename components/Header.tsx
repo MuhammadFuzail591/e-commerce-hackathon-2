@@ -3,9 +3,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react';
 import { IoMenu, IoCloseSharp } from "react-icons/io5";
+import ShoppingCart from './ShoppingCart';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
   return (
     <div className='flex justify-center items-center w-full h-[100px] mx-auto'>
       <header className='flex justify-between items-center w-full max-w-[1286px] h-[41px] px-4'>
@@ -26,11 +28,11 @@ function Header() {
         </nav>
 
         {/* Icons Section */}
-        <div className="icons flex items-center justify-between gap-[10px] sm:gap-[35px]">
+        <div className="icons cursor-pointer flex items-center justify-between gap-[10px] sm:gap-[35px]">
           <Image src="/images/accountIcon.png" alt="Account Icon" width={28} height={28} />
           <Image src="/images/searchIcon.png" alt="Search Icon" width={28} height={28} />
           <Image src="/images/heartIcon.png" alt="Heart Icon" width={28} height={28} />
-          <Image src="/images/cartIcon.png" alt="Shopping Bag Icon" width={28} height={28} />
+          <Image src="/images/cartIcon.png" alt="Shopping Bag Icon" width={28} height={28} onClick={()=> setIsCartOpen(!isCartOpen)}/>
         </div>
 
         {/* Mobile Menu Button (Optional) */}
@@ -53,6 +55,11 @@ function Header() {
           </div>
         </div>
       )}
+      {
+        isCartOpen && (
+          <ShoppingCart onclick={()=> setIsCartOpen(!isCartOpen)}/>
+        )
+      }
     </div>
   )
 }
