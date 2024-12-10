@@ -43,7 +43,7 @@ function Header() {
       </header>
 
       {isMenuOpen && (
-        <div className='md:hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 z-10' onClick={() => setIsMenuOpen(false)}>
+        <div className='md:hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 z-50' onClick={() => setIsMenuOpen(false)}>
           {/* Mobile Menu Content */}
           <div className=' flex flex-col items-center justify-center h-full'>
             <ul className='flex flex-col items-center justify-center gap-6 text-2xl text-white font-bold'>

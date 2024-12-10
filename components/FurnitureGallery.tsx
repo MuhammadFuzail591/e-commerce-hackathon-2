@@ -24,7 +24,7 @@ function FurnitureGallery () {
           #FuniroFurniture
         </h1>
       </div>
-      <section className='columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-4 p-6 bg-gray-100 xl:w-[1799px] xl:h-[780px] '>
+      <section className='columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-4 p-6 bg-gray-100 2xl:w-[1440px] xl:h-[780px] '>
         {images.map((src, index) => (
           <div key={index} className='mb-4'>
             <img
