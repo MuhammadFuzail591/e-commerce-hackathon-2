@@ -63,6 +63,7 @@ export default function Home () {
   ]
   return (
     <div className='flex w-[100%] gap-10 flex-col 2xl:w-[1440px] items-center justify-center mx-auto'>
+      {/* <h1>{process.env.SANITY_API_TOKEN}</h1> */}
       <Hero />
       <Range />
       <Products products={products} isHome={true} />

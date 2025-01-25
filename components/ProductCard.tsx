@@ -17,9 +17,10 @@ function ProductCard ({
   discount
 }: ProductCardProps) {
   return (
-    <div className=''>
-      <div className='flex flex-col md:flex gap-1 relative group'>
+    <div className='border border-black shadow-2xl cursor-pointer rounded-lg'>
+      <div className='flex flex-col md:flex gap-1 rounded-lg relative group'>
         <Image
+          className='rounded-t-lg'
           src={productImg}
           alt={productName}
           width={285}
