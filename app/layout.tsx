@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Montserrat, Poppins } from 'next/font/google';
+import { CartProvider } from "@/context/CartContext";
 
 
 // Use Montserrat font with Latin subset
@@ -30,9 +31,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${montserrat.className} ${poppins.className}`}>
-        <Header/>
-        {children}
-        <Footer/>
+        <CartProvider>
+          <Header/>
+            {children}
+          <Footer/>
+        </CartProvider>
       </body>
     </html>
   );

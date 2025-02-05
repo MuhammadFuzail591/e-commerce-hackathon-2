@@ -13,7 +13,7 @@ interface buttonProps {
 }
 function Button ({
   text,
-  bgColor = 'bg-primary',
+  bgColor = 'bg-[#B88E2F]',
   textColor = 'text-white',
   height = 'py-[25px]',
   width = 'px-[72px]',
