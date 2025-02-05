@@ -1,22 +1,36 @@
 import React, { useState } from 'react';
 import { Star, Plus, Minus, ShoppingCart, RefreshCcw } from 'lucide-react';
-
 import { AiFillInstagram, AiFillLinkedin, AiFillFacebook } from "react-icons/ai";
-
 import Image from 'next/image';
 import { makeDescriptionShort } from '@/data/products';
-import { urlFor } from '@/sanity/client';
+import { ProductImageType, urlFor } from '@/sanity/client';
 
+// ✅ Step 1: Define the Product Interface
+interface Product {
+  title: string;
+  price: number;
+  productImage: ProductImageType;
+  description: string;
+  discountPercentage: number;
+  tags: string[];
+}
 
-const ProductShow1 = ({ product }) => {
-  
+interface ProductShow1Props {
+  product: Product;
+}
+
+// ✅ Step 2: Apply the Interface to Props
+const ProductShow1: React.FC<ProductShow1Props> = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
-  console.log(product)
   const [selectedImage, setSelectedImage] = useState(urlFor(product.productImage));
 
-  const productImages = [urlFor(product.productImage), urlFor(product.productImage), urlFor(product.productImage)];
+  const productImages = [
+    urlFor(product.productImage),
+    urlFor(product.productImage),
+    urlFor(product.productImage)
+  ];
 
-  const handleQuantity = (type:string) => {
+  const handleQuantity = (type: 'inc' | 'dec') => {
     setQuantity((prev) => (type === 'inc' ? prev + 1 : prev > 1 ? prev - 1 : 1));
   };
 
@@ -70,7 +84,7 @@ const ProductShow1 = ({ product }) => {
         </div>
 
         {/* Description */}
-        <p className="text-gray-600">{makeDescriptionShort(product.description,100)}</p>
+        <p className="text-gray-600">{makeDescriptionShort(product.description, 100)}</p>
 
         {/* Quantity and Buttons */}
         <div className="flex items-center gap-4 mt-4">
@@ -95,7 +109,7 @@ const ProductShow1 = ({ product }) => {
 
         {/* Product Metadata */}
         <div className="mt-6 text-sm text-gray-600">
-          <p><strong>Discount:</strong> {product.dicountPercentage}%</p>
+          <p><strong>Discount:</strong> {product.discountPercentage}%</p>
           <p><strong>Tags:</strong> {product.tags.join(', ')}</p>
 
           {/* Social Sharing */}

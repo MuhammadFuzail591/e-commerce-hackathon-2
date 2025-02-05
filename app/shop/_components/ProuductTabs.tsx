@@ -1,15 +1,27 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { urlFor } from '@/sanity/client';
+import { ProductImageType, urlFor } from '@/sanity/client';
 
-const ProductTabs = ({ product }) => {
-  const [activeTab, setActiveTab] = useState('description');
-  // const [selectedImage, setSelectedImage] = useState(urlFor(product.productImage));
+// Define the Product interface
+interface Product {
+  _id: string;
+  title: string;
+  description: string;
+  price: number;
+  productImage: ProductImageType;
+  discountPercentage?: number;
+  isNew?: boolean;
+  tags: string[];
+}
 
-  const productImages = [
-    product.productImage,
-    product.productImage
-  ];
+interface ProductTabsProps {
+  product: Product;
+}
+
+const ProductTabs: React.FC<ProductTabsProps> = ({ product }) => {
+  const [activeTab, setActiveTab] = useState<string>('description');
+
+  const productImages: ProductImageType[] = [product.productImage, product.productImage];
 
   return (
     <div className="max-w-4xl mx-auto p-4">
@@ -18,7 +30,9 @@ const ProductTabs = ({ product }) => {
         {['Description', 'Additional Information', `Reviews [5]`].map((tab) => (
           <button
             key={tab}
-            className={`px-4 py-2 font-semibold ${activeTab === tab.toLowerCase() ? 'border-b-2 border-black' : 'text-gray-500'}`}
+            className={`px-4 py-2 font-semibold ${
+              activeTab === tab.toLowerCase() ? 'border-b-2 border-black' : 'text-gray-500'
+            }`}
             onClick={() => setActiveTab(tab.toLowerCase())}
           >
             {tab}
@@ -35,7 +49,7 @@ const ProductTabs = ({ product }) => {
         {activeTab === 'additional information' && (
           <div className="text-gray-600">
             <p><strong>Price:</strong> Rs. {product.price}</p>
-            <p><strong>Discount:</strong> {product.dicountPercentage}%</p>
+            <p><strong>Discount:</strong> {product.discountPercentage}%</p>
             <p><strong>Tags:</strong> {product.tags.join(', ')}</p>
           </div>
         )}

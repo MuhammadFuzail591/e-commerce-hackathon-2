@@ -24,6 +24,7 @@ const Form = () => {
 
   const onSubmit = (data: FormData) => {
     console.log('Order Data:', data);
+    console.log(errors)
   };
 
   const cartTotal = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);

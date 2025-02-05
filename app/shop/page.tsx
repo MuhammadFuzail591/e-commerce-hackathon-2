@@ -1,13 +1,26 @@
-"use client"
+"use client";
 import React, { useEffect, useState } from 'react';
 import Hero2 from '@/components/Hero2';
 import ShopHeader from '@/components/ShopHeader';
 import Footer2 from '@/components/Footer2';
 import { getData } from '@/data/products';
 import ProductsShop from './_components/ProductsShop';
+import { ProductImageType } from '@/sanity/client';
+
+// Product Interface
+interface Product {
+  _id: string;
+  title: string;
+  description: string;
+  price: number;
+  productImage: ProductImageType;
+  discountPercentage?: number;
+  isNew?: boolean;
+  tags?: string[];
+}
 
 const Shop = () => {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<Product[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {

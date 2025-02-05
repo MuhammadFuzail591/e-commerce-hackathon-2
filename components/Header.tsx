@@ -1,23 +1,15 @@
 "use client"
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { IoMenu, IoCloseSharp } from "react-icons/io5";
 import { useCart } from '../context/CartContext';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
   const { cart } = useCart();
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    handleResize(); // Initial check
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+ 
 
   return (
     <div className='flex justify-center items-center w-full h-[100px] mx-auto'>

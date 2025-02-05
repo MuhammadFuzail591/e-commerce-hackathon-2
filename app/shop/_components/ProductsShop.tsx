@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
-import Button from '@/components/Button';
 import ProductCard from '@/components/ProductCard';
 import { ProductImageType, urlFor } from '@/sanity/client';
 import { makeDescriptionShort } from '@/data/products';
 
 interface Product {
-  productImage: ProductImageType;
-  price: number;
-  tags: string[];
-  discountPercentage: number;
-  description: string;
-  isNew: boolean;
   _id: string;
   title: string;
+  description: string;
+  price: number;
+  productImage: ProductImageType;
+  discountPercentage?: number;
+  isNew?: boolean;
+  tags?: string[];
 }
 
 interface ProductProps {
@@ -64,7 +63,7 @@ const ProductsShop: React.FC<ProductProps> = ({ products }) => {
             productDescription={makeDescriptionShort(product.description, 50)}
             productPrice={product.price}
             discount={product.discountPercentage || 10}
-            isNew={product.isNew}
+            isNew={product.isNew || false}
           />
         ))}
       </div>

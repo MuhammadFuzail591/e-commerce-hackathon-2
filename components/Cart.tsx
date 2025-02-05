@@ -6,16 +6,26 @@ import Button from "./Button";
 import { useRouter } from "next/navigation";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 
+// Cart Item Interface
+interface CartItem {
+  id: string;
+  name: string;
+  price: number;
+  quantity: number;
+  image: string;
+}
+
 const Cart = () => {
   const { cart, removeFromCart, clearCart, updateQuantity } = useCart();
   const router = useRouter();
 
   const goToCheckout = () => {
-    router.push('/checkout')
-  }
+    router.push("/checkout");
+  };
 
-  const calculateSubtotal = (item) => item.price * item.quantity;
-  const calculateTotal = () => cart.reduce((acc, item) => acc + calculateSubtotal(item), 0);
+  // Added Type Annotations
+  const calculateSubtotal = (item: CartItem): number => item.price * item.quantity;
+  const calculateTotal = (): number => cart.reduce((acc: number, item: CartItem) => acc + calculateSubtotal(item), 0);
 
   return (
     <div className="max-w-[1290px] p-4 flex flex-col md:flex-row gap-4">
@@ -31,7 +41,7 @@ const Cart = () => {
               <span>Quantity</span>
               <span>Subtotal</span>
             </div>
-            {cart.map((item, index) => (
+            {cart.map((item: CartItem, index: number) => (
               <div key={index} className="w-[100%] grid grid-cols-4 items-center gap-4 py-4 border-b">
                 <div className="flex items-center gap-2">
                   <Image src={item.image} alt={item.name} width={64} height={64} className="object-cover rounded" />
@@ -47,7 +57,9 @@ const Cart = () => {
                 />
                 <div className="flex items-center gap-2">
                   <span>PKR {calculateSubtotal(item).toLocaleString()}</span>
-                  <button onClick={() => removeFromCart(item.id)} className="text-red-500">{<RiDeleteBin5Fill/>}</button>
+                  <button onClick={() => removeFromCart(item.id)} className="text-red-500">
+                    <RiDeleteBin5Fill />
+                  </button>
                 </div>
               </div>
             ))}
@@ -67,8 +79,14 @@ const Cart = () => {
             <span className="text-orange-500">PKR {calculateTotal().toLocaleString()}</span>
           </div>
           <div className="flex items-center flex-col gap-2 mt-4">
-            <Button text={"Check Out"} onclick={goToCheckout} classes="text-[#000000] bg-transparent rounded-md h-[20px] flex items-center" borderClr="border-black" textColor="text-black"/>
-            <Button text={"Clear Cart"} onclick={clearCart} classes="bg-red-500 rounded-md h-[20px] flex items-center"/>
+            <Button
+              text={"Check Out"}
+              onclick={goToCheckout}
+              classes="text-[#000000] bg-transparent rounded-md h-[20px] flex items-center"
+              borderClr="border-black"
+              textColor="text-black"
+            />
+            <Button text={"Clear Cart"} onclick={clearCart} classes="bg-red-500 rounded-md h-[20px] flex items-center" />
           </div>
         </div>
       )}
