@@ -1,4 +1,4 @@
-import { createClient } from '@sanity/client';
+import { createClient } from 'next-sanity';
 import dotenv from 'dotenv'
 
 dotenv.config({path:'env.local'})
