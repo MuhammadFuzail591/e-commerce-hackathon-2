@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Montserrat, Poppins } from 'next/font/google';
 import { CartProvider } from "@/context/CartContext";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 // Use Montserrat font with Latin subset
@@ -34,6 +35,7 @@ export default function RootLayout({
         <CartProvider>
           <Header/>
             {children}
+            <SpeedInsights/>
           <Footer/>
         </CartProvider>
       </body>
