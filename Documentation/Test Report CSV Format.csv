@@ -1,0 +1,22 @@
+Test Case ID,Test Description,Steps,Expected,Actual,Status,Severity,Remarks
+TC001,Verify Form Submission,"Open form, fill all fields, click submit","Form submitted successfully","As Expected",Passed,High,Success
+TC002,Form Validation for Empty Fields,"Leave all fields empty, click submit","Error messages displayed for each field","As Expected",Passed,High,"Validation works"
+TC003,Email Format Validation,"Enter invalid email (e.g., 'abc.com'), submit form","Error: Invalid email format","As Expected",Passed,Medium,"Validation correct"
+TC004,Input Length Restriction,"Enter 300+ characters in message field","Input restricted to max allowed length","As Expected",Passed,Low,Success
+TC005,Verify Checkout Process,"Add items to cart, proceed to checkout","Checkout completes without errors","As Expected",Passed,High,"Smooth process"
+TC006,Blurred Hero Section Rendering,"Open homepage","Hero section displayed with blurred effect","As Expected",Passed,Low,"Visual effect correct"
+TC007,Button Click Response,"Click 'Submit' button multiple times","Form submits only once, no duplicate actions","As Expected",Passed,Medium,"Debouncing works"
+TC008,Cart Update on Adding Products,"Add items to cart","Cart count updates correctly","As Expected",Passed,High,"Accurate cart update"
+TC009,Responsive Design Check,"Open form on different devices","UI adapts correctly to screen sizes","As Expected",Passed,Medium,"Responsive layout"
+TC010,Placeholder Text Visibility,"Focus and unfocus input fields","Placeholder text visible when unfocused","As Expected",Passed,Low,Success
+TC011,Verify Product Grid Display,"Open product listing page","Products displayed in a grid layout","As Expected",Passed,High,"Grid layout correct"
+TC012,Product Search Functionality,"Enter product name in search bar, click search","Matching products displayed","As Expected",Passed,High,"Search works properly"
+TC013,Pagination Functionality,"Scroll to bottom of product listing page, click next","Next set of products displayed","As Expected",Passed,Medium,"Pagination functional"
+TC014,Product Details Display,"Click on a product from the listing page","Product details displayed correctly","As Expected",Passed,High,"Details page correct"
+TC015,Related Products Display,"Open product details page","Related products displayed correctly","As Expected",Passed,Medium,"Related products shown"
+TC016,Add Product to Cart from Details,"On product details page, click 'Add to Cart' button","Product added to cart successfully","As Expected",Passed,High,"Cart update correct"
+TC017,Search with No Results,"Enter non-existent product name in search bar","Message: 'No products found' displayed","As Expected",Passed,Low,"Edge case handled"
+TC018,Verify Product Price Consistency,"Check product price on listing and details page","Price displayed consistently","As Expected",Passed,High,"Consistency maintained"
+TC019,Navigation from Product to Checkout,"Add product to cart, navigate to checkout","Checkout page loads correctly","As Expected",Passed,High,"Navigation smooth"
+TC020,Mobile View Product Listing,"Open product listing page on mobile","Products displayed correctly in responsive grid","As Expected",Passed,Medium,"Responsive on mobile"
+
